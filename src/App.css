@@ -1,0 +1,140 @@
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input {
+  width: 25% ;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  padding-right: 25px;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+  padding: 5px;
+}
+.header-text{
+  background: #081B4B;
+  color: white;
+  /* margin: 2px 5px; */
+  border-radius: 10px;
+  padding: 1px;
+}
+
+
+h1 {
+  background-color: forestgreen;
+  padding: 20px;
+  color: white;
+}
+#search-form{
+  display: flex;
+  width: 20%;
+  border: 1px solid black;
+   margin: 5px 0;
+  height: 30px;
+  border-radius: 10px;
+  padding: 4px;
+  justify-content: center
+}
+#search{
+  text-align: left;
+  flex: 1;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 80%;
+}
+#search-form button{
+background: rgba(0, 0, 0, 0.6) 0,0,0,7;
+border: 1px;
+outline: none;
+font-size: 17px;
+cursor: pointer;
+}
+.form-inputs{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: auto;
+}
+#new-trans-form{
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin: 6px 0;
+  padding: 5px;
+  justify-content: space-around;
+}
+.text-input{
+  text-align: left;
+}
+#new-item-form input{
+  height: 25px;
+  font-size: 16px;
+}
+#new-item-form button{
+  height: 25px;
+  margin-top: 8px;
+  border-radius: 0;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+table{
+  width: 100%;
+  border-radius: 4px;
+  border-collapse:collapse;
+}
+tr,td,th,table{
+  border: 1px solid;
+}
+th{
+  background: forestgreen;
+  color: white;
+  padding: 6px;
+}
+td{
+  padding: 3px;
+}
+
+tr:hover{
+  color: forestgreen;
+  font-weight: 600;
+}
+

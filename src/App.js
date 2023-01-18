@@ -8,7 +8,7 @@ import SearchForm from "./components/SearchForm";
 function App() {
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/transactions")
+    fetch("https://github.com/i-muiri/bankjson/blob/master/Data/db.json")
       .then((response) => response.json())
       .then((data) => setTransactions(data));
   }, []);

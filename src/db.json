@@ -106,17 +106,17 @@
       "id": 15
     },
     {
-      "date": "",
-      "description": "",
-      "category": "",
-      "amount": "0",
-      "id": 16
-    },
-    {
       "date": "2023-01-03",
       "description": "Dinner",
       "category": "Food",
       "amount": "95",
+      "id": 16
+    },
+    {
+      "date": "2023-01-02",
+      "description": "buy flour",
+      "category": "Food",
+      "amount": "100",
       "id": 17
     }
   ]

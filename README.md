@@ -1,28 +1,47 @@
-# Getting Started with Create React App
+# Project Title
+Bank of Flatiron records
+​
+# Description
+This is a react application that displays the current records that have been accrued in the bank of Flatiron
+​
+# Getting Started
+To view this records, you need to install json server and have NPM installed.
+​
+The link is deployed in
+http://bankofflatiron.vercel.app
+​
+​
+To run the code locally
+ npm install -g json-server
+Running the tests
+​
+Begin by running this command on a different terminal, in the same folder to get the backend started: 
+​
+json-server --watch db.json
+​
+Test your server by visiting this route in the browser: http://localhost:3000/transactions
+​
+Next run the following command in another terminal, in the same folder
+        npm start 
+The terminal may prompt you to start the application on  a different port. Hit Y to accept
+This will start the react application
+​
+## Core Deliverables
+​
+As a user, I should be able to:
+​
+- See a table of the transactions.
+- Fill out and submit the form to add a new transaction. This should add the new
+  transaction to the table **as well as post the new transaction to the backend
+  API for persistence**.
+- Filter transactions by typing into the search bar. Only transactions with a
+  description matching the search term should be shown in the transactions
+  table.
+​
+​
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Authors
+Ian Irungu.
+​
+# License
+ISC

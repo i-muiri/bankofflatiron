@@ -20,7 +20,7 @@ export default function NewTransactionForm({onSubmission}){
                 <input value={formData.amount} name="amount"type = "number" placeholder="Amount"/>
             </div>
 
-            <button>Add Transaction</button>
+            <button id="addBtn">Add Transaction</button>
         </form>
     )
 }

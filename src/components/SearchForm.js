@@ -3,7 +3,7 @@ import React from "react";
  function SearchForm({handleSearch}){
     
     
-    const searchstyle = {width: "20", height: "10", background: "transparent", border: "red", padding: "10px"}
+    const searchstyle = {width: "25", height: "10", background: "transparent"}
    
    
     return (

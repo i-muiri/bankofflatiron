@@ -10,11 +10,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/63ca620d01a72b59f24f6119", {
-    method: "GET",
-    headers: {
-      "X-Master-Key": "$2b$10$eJ73IDPh2ntsp49oJozVXuHHP6sfrJl3mefYn3XhQbYkvDeGVhETu"},
-    })
+    fetch("http://localhost:3000/transactions")
       .then((response) => response.json())
       .then((data) => setTransactions(data));
   }, []);

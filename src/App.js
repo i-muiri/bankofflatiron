@@ -6,9 +6,15 @@ import NewTransactionForm from "./components/NewTransactionForm";
 import SearchForm from "./components/SearchForm";
 
 function App() {
+
+  const [search, setSearch] = useState("");
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/transactions")
+    fetch("https://api.jsonbin.io/v3/b/63ca620d01a72b59f24f6119", {
+    method: "GET",
+    headers: {
+      "X-Master-Key": "$2b$10$eJ73IDPh2ntsp49oJozVXuHHP6sfrJl3mefYn3XhQbYkvDeGVhETu"},
+    })
       .then((response) => response.json())
       .then((data) => setTransactions(data));
   }, []);
@@ -26,17 +32,13 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTransaction),
     };
-    fetch("http://localhost:3000/transactions", serverOptions)
+    fetch("https://api.jsonbin.io/v3/b/63ca620d01a72b59f24f6119", serverOptions)
       .then((response) => response.json())
       .then((newItem) => console.log(newItem));
   }
 
-  function handleonSearch(search) {
-    setTransactions((transactions) =>
-      transactions.filter((transaction) =>
-        transaction.description.includes(search)
-      )
-    );
+  function handleSearch(e) {
+      setSearch(e.target.value);
   }
 
   return (
@@ -44,7 +46,7 @@ function App() {
       <div>
         <h1> Bank of Flatiron</h1>
       </div>
-      <SearchForm onSearch={handleonSearch} />
+      <SearchForm onSearch={handleSearch} />
       <NewTransactionForm onSubmission={handleUpdate} />
       <Transactions transactions={transactions} />
     </div>

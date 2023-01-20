@@ -1,18 +1,21 @@
+import React from "react";
 import { useState } from "react"
-export default function SearchForm(onSearch){
-
-    const [search, setSearch] = useState("")
-    function handleChange(event){
-        setSearch(event.target.value)
-        onSearch(search)
-    }
-
+ function SearchForm(onSearch){
+    
+    
+    const searchstyle = {width: "20", height: "10", background: "transparent", border: "blue"}
+   
+   
     return (
-        <div>
-            <form id="search-form">
-                <input id="search" type="text" name="search" placeholder="Search" />
-                <button id = "search-form button" type="submit">Search</button>
-            </form>
+        <div className="search">
+                <input style = {searchstyle}
+                type="text"
+                placeholder="Search Transactions"
+                onChange={handleSearch}/>
+                
+           
         </div>
     )
 }
+
+export default SearchForm;

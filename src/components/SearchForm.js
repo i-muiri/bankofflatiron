@@ -1,9 +1,9 @@
 import React from "react";
-import { useState } from "react"
- function SearchForm(onSearch){
+
+ function SearchForm({handleSearch}){
     
     
-    const searchstyle = {width: "20", height: "10", background: "transparent", border: "blue"}
+    const searchstyle = {width: "20", height: "10", background: "transparent", border: "red", padding: "10px"}
    
    
     return (

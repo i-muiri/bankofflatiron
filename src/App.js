@@ -10,10 +10,15 @@ function App() {
   const [search, setSearch] = useState("");
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/transactions")
+    fetch("https://json-server-azure.vercel.app/transactions?q=" + search, {
+      method: "GET",
+      headers: {'X-Master-Key': '$2b$10$eJ73IDPh2ntsp49oJozVXuHHP6sfrJl3mefYn3XhQbYkvDeGVhETu',
+                'X-Master-Host': 'api.jsonbin.io'},
+  })
       .then((response) => response.json())
-      .then((data) => setTransactions(data));
-  }, []);
+      .then((data) => setTransactions(data))
+      .catch((err) => console.log(err));
+  }, [search]);
 
   console.log(transactions);
   function handleUpdate(newTransaction) {
@@ -28,7 +33,7 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTransaction),
     };
-    fetch("https://api.jsonbin.io/v3/b/63ca620d01a72b59f24f6119", serverOptions)
+    fetch("https://json-server-azure.vercel.app/transactions", serverOptions)
       .then((response) => response.json())
       .then((newItem) => console.log(newItem));
   }
@@ -42,7 +47,7 @@ function App() {
       <div>
         <h1> Bank of Flatiron</h1>
       </div>
-      <SearchForm onSearch={handleSearch} />
+      <SearchForm handleSearch={handleSearch} />
       <NewTransactionForm onSubmission={handleUpdate} />
       <Transactions transactions={transactions} />
     </div>
